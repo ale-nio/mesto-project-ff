@@ -3,7 +3,7 @@ const cardTemplate = document.querySelector('#card-template').content;
 const cardList = document.querySelector('.places__list');
 
 // Функция удаления карточки
-function deleteCard(cardElement) {
+function deleteCard(cardContent) {
   cardElement.remove();  //удаляет карточку из DOM
 }
 
@@ -26,5 +26,5 @@ function createCard(cardContent, deleteCard) {
 // Добавление всех карточек 
 initialCards.forEach((card) => {
   const cardElement = createCard(card, deleteCard);
-  cardList.append(cardElement);
+  cardList.append(cardContent);
 });
