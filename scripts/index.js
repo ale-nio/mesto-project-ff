@@ -2,11 +2,6 @@
 const cardTemplate = document.querySelector('#card-template').content;
 const cardList = document.querySelector('.places__list');
 
-// Функция удаления карточки
-function deleteCard(cardElement) {
-
-  cardElement.remove(); //Удаление карточки из DOM
-}
 
 // Функция создания одной карточки
 function createCard(cardContent, deleteCard) {
@@ -22,6 +17,12 @@ function createCard(cardContent, deleteCard) {
   deleteButton.addEventListener('click', () => deleteCard(cardElement)); // Обработчик события для удаления карточки 
 
   return cardElement; // Возвращение карточки 
+}
+
+// Функция удаления карточки
+function deleteCard(cardElement) {
+
+  cardElement.remove(); //Удаление карточки из DOM
 }
 
 // Добавление всех карточек 
